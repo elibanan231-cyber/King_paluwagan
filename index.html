@@ -246,14 +246,14 @@
 
     const dates = [];
     let d = new Date('2026-09-27');
-    const end = new Date('2026-12-27');
+    const end = new Date('2027-02-28');
     while (d <= end) {
         dates.push(d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
         d.setDate(d.getDate() + 1);
     }
 
     const trophyStartIndex = dates.indexOf("Sep 27");
-    const lastDayIndex = dates.indexOf("Dec 27");
+    const lastDayIndex = dates.indexOf("Feb 28");
 
     onValue(rootRef, (snapshot) => {
         const val = snapshot.val();
